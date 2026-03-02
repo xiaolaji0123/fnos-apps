@@ -1,0 +1,25 @@
+{
+    "port-config": {
+        "protocol-file": "Nextcloud.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Nextcloud",
+                "permission": {
+                    "rw": [
+                        "nextcloud"
+                    ]
+                }
+            }
+        ]
+    },
+    "docker-project": {
+        "projects": [
+            {
+                "name": "nextcloud",
+                "path": "docker"
+            }
+        ]
+    }
+}
