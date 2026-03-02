@@ -10,7 +10,7 @@ export JELLYFIN_WEB_DIR="$APP_DIR/jellyfin-web"
 
 # fontconfig 需要可写缓存目录，否则大量 warning
 export XDG_CACHE_HOME="$JELLYFIN_CACHE_DIR"
-export LD_LIBRARY_PATH="$APP_DIR/jellyfin-ffmpeg/lib:${LD_LIBRARY_PATH:-}"
+export LD_LIBRARY_PATH="$APP_DIR/jellyfin-ffmpeg:$APP_DIR/jellyfin-ffmpeg/lib:${LD_LIBRARY_PATH:-}"
 
 mkdir -p "$JELLYFIN_DATA_DIR" "$JELLYFIN_CONFIG_DIR" \
          "$JELLYFIN_CACHE_DIR" "$JELLYFIN_LOG_DIR"

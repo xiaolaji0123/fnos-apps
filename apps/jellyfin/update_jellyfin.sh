@@ -9,14 +9,14 @@ APP_NAME="jellyfin"
 APP_DISPLAY_NAME="Jellyfin"
 APP_VERSION_VAR="JELLYFIN_VERSION"
 APP_VERSION="${JELLYFIN_VERSION:-latest}"
-APP_DEPS=(curl tar jq ar)
+APP_DEPS=(curl tar jq)
 APP_FPK_PREFIX="jellyfin"
 APP_HELP_VERSION_EXAMPLE="10.11.6"
 
 app_set_arch_vars() {
     case "$ARCH" in
-        x86) TARBALL_ARCH="amd64" ;;
-        arm) TARBALL_ARCH="arm64" ;;
+        x86) TARBALL_ARCH="amd64"; PORTABLE_SUFFIX="linux64" ;;
+        arm) TARBALL_ARCH="arm64"; PORTABLE_SUFFIX="linuxarm64" ;;
     esac
     info "Tarball arch: $TARBALL_ARCH"
 }
@@ -42,20 +42,20 @@ app_get_latest_version() {
 
 app_download() {
     local tarball_url="https://repo.jellyfin.org/files/server/linux/latest-stable/${TARBALL_ARCH}/jellyfin_${APP_VERSION}-${TARBALL_ARCH}.tar.gz"
-    local ffmpeg_base="https://repo.jellyfin.org/files/ffmpeg/debian/latest-7.x/${TARBALL_ARCH}"
-    local ffmpeg_deb
-    ffmpeg_deb=$(curl -sL "$ffmpeg_base/" | grep -oP 'jellyfin-ffmpeg7_[^"]*-bookworm_'"${TARBALL_ARCH}"'\.deb' | head -1)
-    [ -z "$ffmpeg_deb" ] && error "无法从 $ffmpeg_base/ 解析 ffmpeg 文件名"
-    local ffmpeg_url="${ffmpeg_base}/${ffmpeg_deb}"
+    local ffmpeg_base="https://repo.jellyfin.org/files/ffmpeg/linux/latest-7.x/${TARBALL_ARCH}"
+    local ffmpeg_file
+    ffmpeg_file=$(curl -sL "$ffmpeg_base/" | grep -oP 'jellyfin-ffmpeg_[^"]*_portable_'"${PORTABLE_SUFFIX}"'-gpl\.tar\.\w+' | head -1)
+    [ -z "$ffmpeg_file" ] && error "无法从 $ffmpeg_base/ 解析 ffmpeg portable 文件名"
+    local ffmpeg_url="${ffmpeg_base}/${ffmpeg_file}"
 
     info "下载 ($ARCH): $tarball_url"
     mkdir -p "$WORK_DIR"
     curl -L -f -o "$WORK_DIR/jellyfin.tar.gz" "$tarball_url" || error "下载失败"
     info "下载完成: $(du -h "$WORK_DIR/jellyfin.tar.gz" | cut -f1)"
 
-    info "下载 jellyfin-ffmpeg7: $ffmpeg_deb"
-    curl -L -f -o "$WORK_DIR/jellyfin-ffmpeg7.deb" "$ffmpeg_url" || error "ffmpeg 下载失败"
-    info "ffmpeg 下载完成: $(du -h "$WORK_DIR/jellyfin-ffmpeg7.deb" | cut -f1)"
+    info "下载 jellyfin-ffmpeg portable: $ffmpeg_file"
+    curl -L -f -o "$WORK_DIR/jellyfin-ffmpeg-portable" "$ffmpeg_url" || error "ffmpeg 下载失败"
+    info "ffmpeg 下载完成: $(du -h "$WORK_DIR/jellyfin-ffmpeg-portable" | cut -f1)"
 }
 
 app_build_app_tgz() {
@@ -64,12 +64,15 @@ app_build_app_tgz() {
     tar -xzf jellyfin.tar.gz
     [ -d "jellyfin" ] || error "tarball 结构异常"
 
-    info "解压 jellyfin-ffmpeg7..."
+    info "解压 jellyfin-ffmpeg portable..."
     mkdir -p ffmpeg_extract
-    cd ffmpeg_extract
-    ar x "$WORK_DIR/jellyfin-ffmpeg7.deb"
-    tar xf data.tar* 2>/dev/null || tar xf data.tar.xz 2>/dev/null || tar xf data.tar.gz 2>/dev/null
-    cd "$WORK_DIR"
+    tar -xf jellyfin-ffmpeg-portable -C ffmpeg_extract
+
+    local ffmpeg_bin
+    ffmpeg_bin=$(find ffmpeg_extract -name ffmpeg -type f -print -quit)
+    [ -z "$ffmpeg_bin" ] && error "portable 包中未找到 ffmpeg 二进制文件"
+    local ffmpeg_src
+    ffmpeg_src=$(dirname "$ffmpeg_bin")
 
     info "构建 app.tgz..."
     local dst="$WORK_DIR/app_root"
@@ -77,8 +80,9 @@ app_build_app_tgz() {
 
     cp -a jellyfin/* "$dst/"
 
-    # 内置 jellyfin-ffmpeg (ffmpeg/ffprobe)
-    cp -a ffmpeg_extract/usr/lib/jellyfin-ffmpeg/* "$dst/jellyfin-ffmpeg/" 2>/dev/null || true
+    cp -a "$ffmpeg_src"/* "$dst/jellyfin-ffmpeg/"
+    [ -x "$dst/jellyfin-ffmpeg/ffmpeg" ] || chmod +x "$dst/jellyfin-ffmpeg/ffmpeg"
+    [ -x "$dst/jellyfin-ffmpeg/ffprobe" ] || chmod +x "$dst/jellyfin-ffmpeg/ffprobe" 2>/dev/null || true
     info "ffmpeg 目录: $(du -sh "$dst/jellyfin-ffmpeg" | cut -f1)"
 
     cp "$PKG_DIR/bin/jellyfin-server" "$dst/bin/jellyfin-server" 2>/dev/null || true
