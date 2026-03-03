@@ -1,11 +1,32 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T13:39:39Z",
+  "generated_at": "2026-03-03T13:39:48Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
   },
   "apps": [
+    {
+      "slug": "actual-budget",
+      "appname": "actual-budget",
+      "file_prefix": "actual-budget",
+      "display_name": "Actual Budget",
+      "description": "本地优先的个人记账与预算管理工具",
+      "version": "26.3.0",
+      "fpk_version": "26.3.0",
+      "release_tag": "actual-budget/v26.3.0",
+      "service_port": 5006,
+      "homepage_url": "https://actualbudget.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/actual-budget/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T13:39:42Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system"
+    },
     {
       "slug": "adguardhome",
       "appname": "adguardhome",
@@ -637,6 +658,27 @@
       "category": "content"
     },
     {
+      "slug": "miniflux",
+      "appname": "miniflux",
+      "file_prefix": "miniflux",
+      "display_name": "Miniflux",
+      "description": "极简 RSS 阅读器，Go 编写，性能优异",
+      "version": "2.2.17",
+      "fpk_version": "2.2.17",
+      "release_tag": "miniflux/v2.2.17",
+      "service_port": 8190,
+      "homepage_url": "https://miniflux.app",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/miniflux/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T13:39:40Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
+    },
+    {
       "slug": "mosdns",
       "appname": "mosdns",
       "file_prefix": "mosdns",
@@ -804,6 +846,27 @@
       "download_count": 0,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "photoprism",
+      "appname": "photoprism",
+      "file_prefix": "photoprism",
+      "display_name": "PhotoPrism",
+      "description": "AI 驱动的照片管理工具，支持人脸识别和地图浏览",
+      "version": "251130",
+      "fpk_version": "251130",
+      "release_tag": "photoprism/v251130",
+      "service_port": 2342,
+      "homepage_url": "https://photoprism.app",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/photoprism/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "0001-01-01T00:00:00Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "plex",
@@ -1140,6 +1203,27 @@
       "download_count": 43,
       "app_type": "docker",
       "category": "system"
+    },
+    {
+      "slug": "wikijs",
+      "appname": "wikijs",
+      "file_prefix": "wikijs",
+      "display_name": "Wiki.js",
+      "description": "强大的自托管知识库/Wiki 系统，支持 Markdown 和多种编辑器",
+      "version": "2.5.277",
+      "fpk_version": "2.5.277",
+      "release_tag": "wikijs/v2.5.277",
+      "service_port": 3100,
+      "homepage_url": "https://js.wiki",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wikijs/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T13:39:40Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "wolgoweb",
