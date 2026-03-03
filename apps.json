@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T15:02:01Z",
+  "generated_at": "2026-03-03T15:02:09Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -49,6 +49,27 @@
       "category": "system"
     },
     {
+      "slug": "alist",
+      "appname": "alist",
+      "file_prefix": "alist",
+      "display_name": "Alist",
+      "description": "网盘聚合工具，支持挂载阿里云盘、百度网盘等多种网络存储到本地。",
+      "version": "3.57.0",
+      "fpk_version": "3.57.0",
+      "release_tag": "alist/v3.57.0",
+      "service_port": 5246,
+      "homepage_url": "https://github.com/AlistGo/alist",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/alist/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "0001-01-01T00:00:00Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "download"
+    },
+    {
       "slug": "ani-rss",
       "appname": "ani-rss",
       "file_prefix": "ani-rss",
@@ -68,6 +89,28 @@
       "download_count": 155,
       "app_type": "docker",
       "category": "content"
+    },
+    {
+      "slug": "appflowy",
+      "appname": "appflowy",
+      "file_prefix": "appflowy",
+      "display_name": "AppFlowy",
+      "description": "开源 Notion 替代品，支持自托管的协作文档平台。",
+      "version": "0.9.64",
+      "fpk_version": "0.9.64",
+      "release_tag": "appflowy/v0.9.64",
+      "service_port": 8500,
+      "homepage_url": "https://appflowy.io",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/appflowy/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:02Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system",
+      "post_install_note": "AppFlowy Cloud 需要配合 AppFlowy 客户端使用。"
     },
     {
       "slug": "audiobookshelf",
@@ -360,7 +403,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:54:11Z",
-      "download_count": 1215,
+      "download_count": 1268,
       "app_type": "native",
       "category": "store"
     },
@@ -422,7 +465,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "0001-01-01T00:00:00Z",
+      "updated_at": "2026-03-03T15:02:00Z",
       "download_count": 0,
       "app_type": "native",
       "category": "system"
@@ -445,6 +488,27 @@
       ],
       "updated_at": "2026-03-01T08:08:16Z",
       "download_count": 30,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
+      "slug": "headscale",
+      "appname": "headscale",
+      "file_prefix": "headscale",
+      "display_name": "Headscale",
+      "description": "Tailscale 自托管控制服务器，构建私有 VPN 网络。",
+      "version": "0.28.0",
+      "fpk_version": "0.28.0",
+      "release_tag": "headscale/v0.28.0",
+      "service_port": 8480,
+      "homepage_url": "https://github.com/juanfont/headscale",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/headscale/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:06Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "system"
     },
@@ -612,7 +676,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:04Z",
-      "download_count": 85,
+      "download_count": 88,
       "app_type": "docker",
       "category": "media"
     },
@@ -659,6 +723,28 @@
       "category": "media"
     },
     {
+      "slug": "librechat",
+      "appname": "librechat",
+      "file_prefix": "librechat",
+      "display_name": "LibreChat",
+      "description": "AI 聊天界面，支持 OpenAI、Anthropic 等多种 AI 模型。",
+      "version": "null",
+      "fpk_version": "null",
+      "release_tag": "librechat/vnull",
+      "service_port": 3080,
+      "homepage_url": "https://librechat.ai",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/librechat/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:07Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system",
+      "post_install_note": "安装后请在 Web 界面配置 OpenAI/Anthropic 等 API Key。"
+    },
+    {
       "slug": "lidarr",
       "appname": "lidarr",
       "file_prefix": "lidarr",
@@ -701,6 +787,27 @@
       "category": "content"
     },
     {
+      "slug": "loki",
+      "appname": "loki",
+      "file_prefix": "loki",
+      "display_name": "Loki",
+      "description": "轻量级日志聚合系统，Grafana 生态的日志解决方案。",
+      "version": "3.6.7",
+      "fpk_version": "3.6.7",
+      "release_tag": "loki/v3.6.7",
+      "service_port": 3100,
+      "homepage_url": "https://grafana.com/oss/loki/",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/loki/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:05Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "lucky",
       "appname": "lucky",
       "file_prefix": "lucky",
@@ -720,6 +827,28 @@
       "download_count": 0,
       "app_type": "native",
       "category": "system"
+    },
+    {
+      "slug": "mattermost",
+      "appname": "mattermost",
+      "file_prefix": "mattermost",
+      "display_name": "Mattermost",
+      "description": "企业级即时通讯平台，Slack 的开源替代方案。",
+      "version": "11.4.2",
+      "fpk_version": "11.4.2",
+      "release_tag": "mattermost/v11.4.2",
+      "service_port": 8065,
+      "homepage_url": "https://mattermost.com",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:02Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system",
+      "post_install_note": "首次访问后请完成初始化向导并创建管理员账号。"
     },
     {
       "slug": "mealie",
@@ -801,7 +930,7 @@
         "arm"
       ],
       "updated_at": "2026-03-03T13:38:40Z",
-      "download_count": 0,
+      "download_count": 5,
       "app_type": "native",
       "category": "system"
     },
@@ -870,6 +999,28 @@
       "category": "media"
     },
     {
+      "slug": "netbird",
+      "appname": "netbird",
+      "file_prefix": "netbird",
+      "display_name": "NetBird",
+      "description": "零信任 VPN 管理平台，提供简单的私有网络组建。",
+      "version": "0.66.1",
+      "fpk_version": "0.66.1",
+      "release_tag": "netbird/v0.66.1",
+      "service_port": 8820,
+      "homepage_url": "https://netbird.io",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netbird/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:04Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "system",
+      "post_install_note": "NetBird 客户端容器使用 host 网络模式运行。"
+    },
+    {
       "slug": "nextcloud",
       "appname": "nextcloud",
       "file_prefix": "nextcloud",
@@ -908,6 +1059,27 @@
       ],
       "updated_at": "2026-02-28T06:23:50Z",
       "download_count": 65,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
+      "slug": "ntfy",
+      "appname": "ntfy",
+      "file_prefix": "ntfy",
+      "display_name": "Ntfy",
+      "description": "自托管的推送通知服务器，支持 HTTP 接口发送通知到手机和桌面。",
+      "version": "2.17.0",
+      "fpk_version": "2.17.0",
+      "release_tag": "ntfy/v2.17.0",
+      "service_port": 2586,
+      "homepage_url": "https://ntfy.sh",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ntfy/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-03-03T15:02:03Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "system"
     },
@@ -1330,6 +1502,27 @@
       "download_count": 47,
       "app_type": "native",
       "category": "download"
+    },
+    {
+      "slug": "tautulli",
+      "appname": "tautulli",
+      "file_prefix": "tautulli",
+      "display_name": "Tautulli",
+      "description": "Plex 使用统计和监控工具，追踪观看历史和服务器性能。",
+      "version": "2.16.1",
+      "fpk_version": "2.16.1",
+      "release_tag": "tautulli/v2.16.1",
+      "service_port": 8181,
+      "homepage_url": "https://tautulli.com",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tautulli/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "0001-01-01T00:00:00Z",
+      "download_count": 0,
+      "app_type": "docker",
+      "category": "media"
     },
     {
       "slug": "tinymediamanager",
