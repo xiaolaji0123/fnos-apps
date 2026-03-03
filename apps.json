@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-03T18:47:24Z",
+  "generated_at": "2026-03-03T18:47:38Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -55,8 +55,8 @@
       "display_name": "Alist",
       "description": "网盘聚合工具，支持挂载阿里云盘、百度网盘等多种网络存储到本地。",
       "version": "3.57.0",
-      "fpk_version": "3.57.0",
-      "release_tag": "alist/v3.57.0",
+      "fpk_version": "3.57.0-r1",
+      "release_tag": "alist/v3.57.0-r1",
       "service_port": 5246,
       "homepage_url": "https://github.com/AlistGo/alist",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/alist/fnos/ICON_256.PNG",
@@ -64,7 +64,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:02:08Z",
+      "updated_at": "2026-03-03T18:47:22Z",
       "download_count": 0,
       "app_type": "native",
       "category": "download"
@@ -182,8 +182,8 @@
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
       "version": "0.4.17",
-      "fpk_version": "0.4.17-r3",
-      "release_tag": "certimate/v0.4.17-r3",
+      "fpk_version": "0.4.17-r4",
+      "release_tag": "certimate/v0.4.17-r4",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -191,7 +191,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:10Z",
+      "updated_at": "2026-03-03T18:47:25Z",
       "download_count": 25,
       "app_type": "native",
       "category": "system"
@@ -1111,8 +1111,8 @@
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。",
       "version": "2.3.3",
-      "fpk_version": "2.3.3-r6",
-      "release_tag": "nginx-ui/v2.3.3-r6",
+      "fpk_version": "2.3.3-r7",
+      "release_tag": "nginx-ui/v2.3.3-r7",
       "service_port": 9000,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -1120,7 +1120,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:23:50Z",
+      "updated_at": "2026-03-03T18:47:30Z",
       "download_count": 71,
       "app_type": "native",
       "category": "system"
@@ -1258,8 +1258,8 @@
       "display_name": "Prometheus",
       "description": "时序数据库和监控系统，支持灵活的查询语言和告警规则。",
       "version": "3.10.0",
-      "fpk_version": "3.10.0",
-      "release_tag": "prometheus/v3.10.0",
+      "fpk_version": "3.10.0-r1",
+      "release_tag": "prometheus/v3.10.0-r1",
       "service_port": 9090,
       "homepage_url": "https://prometheus.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/prometheus/fnos/ICON_256.PNG",
@@ -1267,7 +1267,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:01:54Z",
+      "updated_at": "2026-03-03T18:47:28Z",
       "download_count": 0,
       "app_type": "native",
       "category": "system"
@@ -1363,8 +1363,8 @@
       "display_name": "Rclone",
       "description": "强大的云存储同步工具，支持 50+ 种存储后端的文件管理和同步。",
       "version": "1.73.1",
-      "fpk_version": "1.73.1",
-      "release_tag": "rclone/v1.73.1",
+      "fpk_version": "1.73.1-r1",
+      "release_tag": "rclone/v1.73.1-r1",
       "service_port": 5572,
       "homepage_url": "https://rclone.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rclone/fnos/ICON_256.PNG",
@@ -1372,7 +1372,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-03T15:01:58Z",
+      "updated_at": "2026-03-03T18:47:26Z",
       "download_count": 0,
       "app_type": "native",
       "category": "download"
