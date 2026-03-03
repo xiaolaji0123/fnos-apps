@@ -27,8 +27,10 @@ npm install -g --prefix ./openclaw_global "openclaw@${VERSION}"
 echo "==> Building app.tgz..."
 mkdir -p app_root/server app_root/ui
 
-# Copy Node.js runtime
-cp -r node app_root/server/
+# Copy Node.js runtime (binary only, npm not needed at runtime)
+mkdir -p app_root/server/node/bin
+cp node/bin/node app_root/server/node/bin/
+cp node/LICENSE app_root/server/node/
 
 # Copy openclaw npm package
 cp -r openclaw_global app_root/server/
