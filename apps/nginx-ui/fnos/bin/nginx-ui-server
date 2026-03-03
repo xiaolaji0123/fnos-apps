@@ -4,67 +4,57 @@ APP_DATA_DIR=$1
 
 APP_INI="${APP_DATA_DIR}/app.ini"
 
-# --- Discover external nginx app (appname: nginxserver) ---
-NGINX_APPNAME="nginxserver"
-NGINX_APP_BASE="/var/apps/${NGINX_APPNAME}"
+# --- Bundled nginx paths (shipped inside this app) ---
+NGINX_BIN="${APP_DIR}/sbin/nginx"
+NGINX_CONF="${APP_DATA_DIR}/nginx.conf"
+NGINX_LOG_DIR="${APP_DATA_DIR}/logs"
+NGINX_PID="${APP_DATA_DIR}/nginx.pid"
+NGINX_TEMP_DIR="${APP_DATA_DIR}/tmp"
 
-if [ ! -d "$NGINX_APP_BASE" ]; then
-    echo "ERROR: 未找到 Nginx 应用 (${NGINX_APP_BASE})，请先安装 Nginx。" >&2
-    exit 1
-fi
+# --- Ensure directory structure ---
+mkdir -p "$NGINX_LOG_DIR"
+mkdir -p "$NGINX_TEMP_DIR"
 
-# fnOS convention: target/ = TRIM_APPDEST, var/ = TRIM_PKGVAR (both are symlinks)
-NGINX_APP_DIR="${NGINX_APP_BASE}/target"
-NGINX_DATA_DIR="${NGINX_APP_BASE}/var"
-NGINX_BIN="${NGINX_APP_DIR}/sbin/nginx"
-
-if [ ! -x "$NGINX_BIN" ]; then
-    echo "ERROR: 未找到 Nginx 可执行文件 (${NGINX_BIN})，请确认 Nginx 应用已安装完成。" >&2
-    exit 1
-fi
-
-if [ ! -d "$NGINX_DATA_DIR" ]; then
-    echo "ERROR: 未找到 Nginx 数据目录 (${NGINX_DATA_DIR})，请确认 Nginx 应用已启动过至少一次。" >&2
-    exit 1
-fi
-
-NGINX_CONF="${NGINX_DATA_DIR}/nginx.conf"
-NGINX_LOG_DIR="${NGINX_DATA_DIR}/logs"
-NGINX_PID="${NGINX_DATA_DIR}/nginx.pid"
-
-# --- Ensure nginx directory structure for nginx-ui ---
-# nginx-ui expects these directories to exist for site/stream management
 for dir in sites-available sites-enabled conf.d streams-available streams-enabled; do
-    mkdir -p "${NGINX_DATA_DIR}/${dir}"
+    mkdir -p "${APP_DATA_DIR}/${dir}"
 done
 
-# --- Patch nginx.conf to include nginx-ui managed directories ---
-if [ -f "$NGINX_CONF" ]; then
-    CONF_CHANGED=false
+# --- Generate default nginx.conf if not exists ---
+if [ ! -f "$NGINX_CONF" ]; then
+    cat > "$NGINX_CONF" << CONF
+worker_processes auto;
+pid ${NGINX_PID};
+error_log ${NGINX_LOG_DIR}/error.log;
 
-    # Add conf.d include inside http block (if not present)
-    if ! grep -q 'include.*conf\.d/' "$NGINX_CONF"; then
-        sed -i '/^http {/a\    include '"${NGINX_DATA_DIR}"'/conf.d/*.conf;' "$NGINX_CONF"
-        CONF_CHANGED=true
-    fi
+events {
+    worker_connections 1024;
+}
 
-    # Add sites-enabled include inside http block (if not present)
-    if ! grep -q 'include.*sites-enabled/' "$NGINX_CONF"; then
-        sed -i '/^http {/a\    include '"${NGINX_DATA_DIR}"'/sites-enabled/*;' "$NGINX_CONF"
-        CONF_CHANGED=true
-    fi
+http {
+    include       ${APP_DIR}/conf/mime.types;
+    default_type  application/octet-stream;
 
-    # Add stream block with streams-enabled include (if not present)
-    if ! grep -q '^stream' "$NGINX_CONF"; then
-        printf '\nstream {\n    include %s/streams-enabled/*;\n}\n' "${NGINX_DATA_DIR}" >> "$NGINX_CONF"
-        CONF_CHANGED=true
-    fi
+    access_log ${NGINX_LOG_DIR}/access.log;
 
-    # Reload nginx if config was changed and nginx is running
-    if [ "$CONF_CHANGED" = true ] && [ -f "$NGINX_PID" ] && kill -0 "$(cat "$NGINX_PID")" 2>/dev/null; then
-        "$NGINX_BIN" -c "$NGINX_CONF" -t 2>/dev/null && "$NGINX_BIN" -c "$NGINX_CONF" -s reload
-    fi
+    sendfile        on;
+    keepalive_timeout  65;
+
+    client_body_temp_path ${NGINX_TEMP_DIR}/client_body;
+    proxy_temp_path       ${NGINX_TEMP_DIR}/proxy;
+    fastcgi_temp_path     ${NGINX_TEMP_DIR}/fastcgi;
+    uwsgi_temp_path       ${NGINX_TEMP_DIR}/uwsgi;
+    scgi_temp_path        ${NGINX_TEMP_DIR}/scgi;
+
+    include ${APP_DATA_DIR}/sites-enabled/*;
+    include ${APP_DATA_DIR}/conf.d/*.conf;
+}
+
+stream {
+    include ${APP_DATA_DIR}/streams-enabled/*;
+}
+CONF
 fi
+
 # --- Generate default app.ini for nginx-ui if not exists ---
 if [ ! -f "$APP_INI" ]; then
     cat > "$APP_INI" << INI
@@ -76,7 +66,7 @@ RunMode  = release
 [nginx]
 AccessLogPath = ${NGINX_LOG_DIR}/access.log
 ErrorLogPath  = ${NGINX_LOG_DIR}/error.log
-ConfigDir     = ${NGINX_DATA_DIR}
+ConfigDir     = ${APP_DATA_DIR}
 ConfigPath    = ${NGINX_CONF}
 SbinPath      = ${NGINX_BIN}
 PIDPath       = ${NGINX_PID}
@@ -85,30 +75,28 @@ ReloadCmd     = ${NGINX_BIN} -c ${NGINX_CONF} -s reload
 RestartCmd    = ${NGINX_BIN} -c ${NGINX_CONF} -s reload
 
 [node]
-Name = Local
+Name = fnOS
 INI
 fi
 
-# --- Patch existing app.ini: ensure ConfigPath and SbinPath have correct values ---
+# --- Always ensure critical nginx paths point to bundled binary ---
+# (handles upgrades where app install path may have changed)
 if [ -f "$APP_INI" ]; then
-    # Fix ConfigPath if empty or missing
-    if grep -q '^ConfigPath[[:space:]]*=[[:space:]]*$' "$APP_INI"; then
-        sed -i 's|^ConfigPath[[:space:]]*=.*|ConfigPath      = '"${NGINX_CONF}"'|' "$APP_INI"
-    elif ! grep -q '^ConfigPath' "$APP_INI"; then
-        sed -i '/^ConfigDir/a\ConfigPath      = '"${NGINX_CONF}" "$APP_INI"
-    fi
-    # Fix SbinPath if empty or missing
-    if grep -q '^SbinPath[[:space:]]*=[[:space:]]*$' "$APP_INI"; then
-        sed -i 's|^SbinPath[[:space:]]*=.*|SbinPath        = '"${NGINX_BIN}"'|' "$APP_INI"
-    elif ! grep -q '^SbinPath' "$APP_INI"; then
-        sed -i '/^ConfigPath/a\SbinPath        = '"${NGINX_BIN}" "$APP_INI"
-    fi
+    sed -i "s|^SbinPath[[:space:]]*=.*|SbinPath        = ${NGINX_BIN}|" "$APP_INI"
+    sed -i "s|^ConfigPath[[:space:]]*=.*|ConfigPath      = ${NGINX_CONF}|" "$APP_INI"
+    sed -i "s|^PIDPath[[:space:]]*=.*|PIDPath         = ${NGINX_PID}|" "$APP_INI"
+    sed -i "s|^TestConfigCmd[[:space:]]*=.*|TestConfigCmd   = ${NGINX_BIN} -t -c ${NGINX_CONF}|" "$APP_INI"
+    sed -i "s|^ReloadCmd[[:space:]]*=.*|ReloadCmd       = ${NGINX_BIN} -c ${NGINX_CONF} -s reload|" "$APP_INI"
+    sed -i "s|^RestartCmd[[:space:]]*=.*|RestartCmd      = ${NGINX_BIN} -c ${NGINX_CONF} -s reload|" "$APP_INI"
 fi
 
-# Ensure nginx lib path is available for nginx commands (nginx -t, etc.)
-export LD_LIBRARY_PATH=${NGINX_APP_DIR}/lib:${APP_DIR}/lib:${LD_LIBRARY_PATH:-}
-export PATH=${NGINX_APP_DIR}/sbin:$PATH
+# Ensure nginx lib path is available
+export LD_LIBRARY_PATH=${APP_DIR}/lib:${LD_LIBRARY_PATH:-}
+export PATH=${APP_DIR}/sbin:$PATH
 
-# Start nginx-ui as foreground process (PID tracked by fnOS)
+# --- Start bundled nginx daemon ---
+"$NGINX_BIN" -c "$NGINX_CONF" -e "$NGINX_LOG_DIR/error.log"
+
+# --- Start nginx-ui (foreground, PID tracked by fnOS) ---
 cd "$APP_DIR" || exit 1
 exec ./nginx-ui --config "$APP_INI"
