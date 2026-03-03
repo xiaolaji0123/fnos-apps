@@ -39,14 +39,7 @@
 
 | 文件 | 必需 | 说明 |
 |------|:---:|------|
-| `build-<slug>.yml` | ✅ | 触发条件：push 到 `apps/<slug>/**`、每日 cron、手动触发 |
-
-### 注册
-
-| 位置 | 操作 |
-|------|------|
-| `reusable-build-app.yml` 第 7 行 | 在 `description` 中追加 slug |
-| `reusable-build-app.yml` 第 50 行 | 在 `VALID_APPS` 中追加 slug |
+CI 自动发现 `apps/<slug>/` 目录，无需创建单独的 workflow 文件或修改白名单。
 
 ---
 
@@ -136,9 +129,7 @@ journalctl -u trim_app_center --since "5 minutes ago" --no-pager
 ### 提交代码
 
 ```bash
-git add apps/<slug>/ scripts/apps/<slug>/ \
-        .github/workflows/build-<slug>.yml \
-        .github/workflows/reusable-build-app.yml
+git add apps/<slug>/ scripts/apps/<slug>/
 
 git commit -m 'feat: add <display-name> app (<slug>, port <port>)'
 git push origin main

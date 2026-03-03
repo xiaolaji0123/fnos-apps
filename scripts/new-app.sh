@@ -229,44 +229,6 @@ ${CHANGELOG}
 - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)
 EOF
 
-# Create .github/workflows/build-{app}.yml entry workflow
-WORKFLOW_FILE="$REPO_ROOT/.github/workflows/build-${APPNAME}.yml"
-cat > "$WORKFLOW_FILE" << EOF
-name: Build $DISPLAY_NAME fnOS Package
-
-permissions:
-  contents: write
-
-on:
-  push:
-    paths:
-      - 'apps/$APPNAME/**'
-      - 'shared/**'
-      - '!**/*.md'
-  schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version (leave empty for latest)'
-        required: false
-        default: ''
-      revision:
-        description: 'Revision suffix (e.g., r2 for re-release, leave empty for auto)'
-        required: false
-        default: ''
-
-jobs:
-  build:
-    uses: ./.github/workflows/reusable-build-app.yml
-    with:
-      app: $APPNAME
-      version: \${{ github.event.inputs.version || '' }}
-      revision: \${{ github.event.inputs.revision || '' }}
-      event_name: \${{ github.event_name }}
-    secrets: inherit
-EOF
-
 info "App scaffolded at: apps/$APPNAME/"
 info "App contract at: scripts/apps/$APPNAME/"
 info ""

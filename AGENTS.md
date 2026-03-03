@@ -49,7 +49,7 @@ fnos-apps/
 │   │   └── update-common.sh  # Common functions for app builds
 │   └── ci/              # CI helper scripts
 │       └── resolve-release-tag.sh  # Version tag resolution with -r2/-r3 auto-increment
-└── .github/workflows/   # Per-app CI: check-version → build (x86+arm matrix) → release
+└── .github/workflows/   # CI: single dynamic workflow + reusable build pipeline
 ```
 
 ## WHERE TO LOOK
@@ -66,7 +66,8 @@ fnos-apps/
 | Build utilities | `scripts/lib/update-common.sh` | Shared functions: info(), warn(), error(), cleanup trap |
 | Version tag resolution | `scripts/ci/resolve-release-tag.sh` | Determines release tag with -r2/-r3 auto-increment |
 | Generic fpk packager | `scripts/build-fpk.sh` | Unified packaging: shared + app-specific → .fpk |
-| CI/CD pipeline | `.github/workflows/reusable-build-app.yml` | Reusable workflow: check-version → build (matrix) → release |
+| CI/CD entry | `.github/workflows/build-apps.yml` | Single workflow: detect changed apps → dynamic matrix build |
+| CI/CD pipeline | `.github/workflows/reusable-build-app.yml` | Reusable workflow: check-version → build (x86+arm) → release |
 | App metadata | `apps/*/fnos/manifest` | Key=value: appname, version, port, checksum |
 | User/group permissions | `apps/*/fnos/config/privilege` | JSON: run-as user, extra groups (video/render for Plex) |
 | Port forwarding rules | `apps/*/fnos/*.sc` | fnOS firewall port config |
@@ -94,6 +95,7 @@ fnos-apps/
 - **DO NOT duplicate shared/cmd/ logic in app-specific cmd/** — only override what differs.
 - **DO NOT skip checksum** — `app.tgz` md5 must be written to manifest.
 - **DO NOT create per-app build scripts in scripts/ci/** — use `scripts/apps/<app>/build.sh` instead.
+- **DO NOT create per-app workflow files** — `build-apps.yml` auto-discovers apps from `apps/` directory.
 
 ## UNIQUE STYLES
 

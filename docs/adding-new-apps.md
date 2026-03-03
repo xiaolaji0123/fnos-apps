@@ -55,7 +55,8 @@
 2. `apps/<slug>/CHANGELOG.md` — 更新日志模板。
 3. `apps/<slug>/README.md` — 应用说明模板。
 4. `scripts/apps/<slug>/` — 构建合约目录（meta.env、build.sh、get-latest-version.sh、release-notes.tpl）。
-5. `.github/workflows/build-<slug>.yml` — GitHub Actions 入口工作流（调用可复用工作流）。
+
+> CI 自动发现 `apps/` 下的新应用，无需手动创建 workflow 文件。
 
 > **注意**: 脚手架生成的是**原生二进制模式**的模板。如需 Docker 模式，请参考 [第 5 节](#5-打包策略) 中的 Docker 容器策略。
 
@@ -440,46 +441,24 @@ main_flow "$@"
 
 ### 架构概览
 
-项目使用 GitHub Actions，采用**入口工作流 + 可复用工作流**的两层结构。
+项目使用 GitHub Actions，采用**统一入口 + 动态矩阵 + 可复用工作流**的结构。
 
 ```
 .github/workflows/
+├── build-apps.yml             # 统一入口：自动检测变更应用 → 动态矩阵构建
 ├── reusable-build-app.yml     # 可复用工作流：版本检测 → 双架构构建 → 发布
-├── build-plex.yml             # 入口：触发条件 + 调用 reusable-build-app
-├── build-emby.yml
-├── build-<app>.yml            # 每个应用一个入口工作流
 └── update-apps-json.yml       # 发布后自动更新 apps.json
 ```
 
-### 入口工作流
+### 统一入口工作流 (`build-apps.yml`)
 
-每个应用的入口工作流结构相同，仅 `app` 参数和触发路径不同：
+一个工作流覆盖所有应用，无需为每个应用创建单独的 workflow 文件：
 
-```yaml
-name: Build <Display Name> fnOS Package
-permissions:
-  contents: write
-on:
-  push:
-    paths: ['apps/<app>/**', 'shared/**', '!**/*.md']
-  schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version (leave empty for latest)'
-      revision:
-        description: 'Revision suffix (e.g., r2)'
-jobs:
-  build:
-    uses: ./.github/workflows/reusable-build-app.yml
-    with:
-      app: <app-slug>
-      version: ${{ github.event.inputs.version || '' }}
-      revision: ${{ github.event.inputs.revision || '' }}
-      event_name: ${{ github.event_name }}
-    secrets: inherit
-```
+- **push**: 自动检测 `apps/` 和 `shared/` 下的变更，只构建受影响的应用。若 `shared/` 有变更则重建所有应用。
+- **schedule**: 每日 08:00 UTC 检查所有应用的上游版本。
+- **workflow_dispatch**: 手动指定 app slug 触发构建。
+
+新增应用时，只需创建 `apps/<app>/` 和 `scripts/apps/<app>/` 目录，CI 自动发现。
 
 ### 可复用工作流 (`reusable-build-app.yml`)
 
@@ -489,7 +468,7 @@ jobs:
 2. **build** (matrix: x86 + arm): 运行 `build.sh` 生成 `app.tgz` → 调用 `build-fpk.sh` 打包 `.fpk`。
 3. **release**: 创建 GitHub Release，上传双架构 `.fpk` 文件，渲染发布日志。
 
-**`VALID_APPS` 白名单**: `reusable-build-app.yml` 中维护了一份合法应用列表。**新增应用时必须将 slug 添加到此列表**，否则 CI 会拒绝构建。
+**动态验证**: `reusable-build-app.yml` 检查 `apps/<app>/` 目录和 `scripts/apps/<app>/meta.env` 是否存在，无需维护硬编码白名单。
 
 ### 版本标签规范
 
@@ -541,8 +520,7 @@ jobs:
 - [ ] **端口**: `manifest` 中的 `service_port` 是否与应用默认端口一致？
 - [ ] **防火墙**: `<App>.sc` 文件是否定义了端口转发规则？
 - [ ] **构建合约**: `meta.env`、`get-latest-version.sh`、`build.sh`、`release-notes.tpl` 是否齐全？
-- [ ] **CI 入口**: `.github/workflows/build-<app>.yml` 是否创建？
-- [ ] **VALID_APPS**: 是否已将 slug 添加到 `reusable-build-app.yml` 的 `VALID_APPS` 列表？
+- [ ] **CI 自动发现**: `apps/<app>/` 和 `scripts/apps/<app>/meta.env` 是否都存在？（CI 自动检测，无需手动创建 workflow）
 - [ ] **CHANGELOG**: `apps/<app>/CHANGELOG.md` 是否包含首次发布条目？
 
 ### 原生二进制模式追加

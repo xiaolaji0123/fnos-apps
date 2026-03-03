@@ -66,8 +66,9 @@ Core lifecycle framework: `shared/cmd/common` (~375 lines)
 ### CI Pipeline
 
 ```
-Per-app entry workflow (.github/workflows/build-<app>.yml)
-  → Reusable workflow (reusable-build-app.yml)
+Single entry workflow (build-apps.yml)
+  → detect: auto-discover changed apps (push) or all apps (schedule/dispatch)
+  → dynamic matrix per app → Reusable workflow (reusable-build-app.yml)
     → check-version: source meta.env + get-latest-version.sh + resolve-release-tag.sh
     → build: matrix [x86, arm] → build.sh + build-fpk.sh
     → release: create GitHub release with release-notes.tpl
