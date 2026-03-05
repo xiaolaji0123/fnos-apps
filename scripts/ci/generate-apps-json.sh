@@ -16,7 +16,7 @@ parse_manifest() {
 }
 
 echo "Fetching release list from ${REPO}..."
-ALL_RELEASES=$(gh release list --repo "$REPO" --limit 200 --json tagName,publishedAt)
+ALL_RELEASES=$(gh release list --repo "$REPO" --limit 1000 --json tagName,publishedAt)
 
 echo "Fetching download statistics..."
 DOWNLOAD_DATA=$(gh api "repos/${REPO}/releases" --paginate | jq '[.[] | {tag: .tag_name, downloads: ([.assets[].download_count] | add // 0)}]')

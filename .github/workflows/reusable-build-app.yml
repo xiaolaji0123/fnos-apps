@@ -198,6 +198,28 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Cleanup old revisions
+        run: |
+          APP="${{ inputs.app }}"
+          RELEASE_TAG="${{ needs.check-version.outputs.release_tag }}"
+          VERSION="${{ needs.check-version.outputs.version }}"
+          BASE_TAG="${APP}/v${VERSION}"
+
+          OLD_TAGS=$(gh release list --repo "${{ github.repository }}" --limit 1000 --json tagName \
+            | jq -r --arg base "$BASE_TAG" --arg current "$RELEASE_TAG" \
+              '.[] | select((.tagName == $base or (.tagName | startswith($base + "-r"))) and .tagName != $current) | .tagName')
+
+          if [ -z "$OLD_TAGS" ]; then
+            echo "No old revisions to clean up"
+          else
+            for tag in $OLD_TAGS; do
+              echo "Deleting old revision: $tag"
+              gh release delete "$tag" --yes --cleanup-tag || true
+            done
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update apps.json
         run: gh workflow run update-apps-json.yml --ref main
         env:
