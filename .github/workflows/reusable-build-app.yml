@@ -220,6 +220,38 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Cleanup old versions
+        run: |
+          APP="${{ inputs.app }}"
+          MAX_VERSIONS=3
+
+          # Get all releases for this app
+          RELEASES=$(gh release list --repo "${{ github.repository }}" --limit 1000 \
+            --json tagName,publishedAt \
+            | jq --arg prefix "${APP}/v" \
+              '[.[] | select(.tagName | startswith($prefix))]')
+
+          # Group by upstream version (strip -rN), keep only latest MAX_VERSIONS
+          TAGS_TO_DELETE=$(echo "$RELEASES" | jq -r --argjson max "$MAX_VERSIONS" '
+            map(. + {base_version: (.tagName | sub("-r[0-9]+$"; ""))})
+            | group_by(.base_version)
+            | map({latest: (map(.publishedAt) | sort | last), tags: map(.tagName)})
+            | sort_by(.latest) | reverse
+            | .[$max:]
+            | map(.tags[]) | .[]
+          ')
+
+          if [ -z "$TAGS_TO_DELETE" ]; then
+            echo "No old versions to clean up (keeping up to $MAX_VERSIONS upstream versions)"
+          else
+            for tag in $TAGS_TO_DELETE; do
+              echo "Deleting old version: $tag"
+              gh release delete "$tag" --yes --cleanup-tag || true
+            done
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update apps.json
         run: gh workflow run update-apps-json.yml --ref main
         env:
