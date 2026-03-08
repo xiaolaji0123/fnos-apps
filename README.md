@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-83-2ea44f)
+![Apps](https://img.shields.io/badge/apps-106-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -37,6 +37,12 @@
 | <img src="apps/ente/fnos/ICON.PNG" width="28"> | [**Ente**](apps/ente/) | `8510` | 端到端加密照片备份 | [官网](https://ente.io) | [Release][r-ente] |
 | <img src="apps/sunshine/fnos/ICON.PNG" width="28"> | [**Sunshine**](apps/sunshine/) | `47990` | 游戏串流服务器，配合 Moonlight 使用 | [GitHub](https://github.com/LizardByte/Sunshine) | [Release][r-sunshine] |
 | <img src="apps/frigate/fnos/ICON.PNG" width="28"> | [**Frigate**](apps/frigate/) | `8971` | AI 视频监控，支持实时物体检测 | [官网](https://frigate.video) | [Release][r-frigate] |
+| <img src="apps/komga/fnos/ICON.PNG" width="28"> | [**Komga**](apps/komga/) | `25600` | 漫画/电子书媒体服务器，支持 OPDS | [GitHub](https://github.com/gotson/komga) | [Release][r-komga] |
+| <img src="apps/koodo-reader/fnos/ICON.PNG" width="28"> | [**Koodo Reader**](apps/koodo-reader/) | `8930` | 现代电子书管理器与阅读器 | [GitHub](https://github.com/koodo-reader/koodo-reader) | [Release][r-koodo] |
+| <img src="apps/jellystat/fnos/ICON.PNG" width="28"> | [**Jellystat**](apps/jellystat/) | `3004` | Jellyfin 使用统计与分析 | [GitHub](https://github.com/CyferShepard/Jellystat) | [Release][r-jellystat] |
+| <img src="apps/ombi/fnos/ICON.PNG" width="28"> | [**Ombi**](apps/ombi/) | `3579` | 媒体请求与用户管理 | [GitHub](https://github.com/Ombi-app/Ombi) | [Release][r-ombi] |
+| <img src="apps/wizarr/fnos/ICON.PNG" width="28"> | [**Wizarr**](apps/wizarr/) | `5690` | Plex/Jellyfin 用户邀请管理 | [GitHub](https://github.com/wizarrrr/wizarr) | [Release][r-wizarr] |
+| <img src="apps/medusa/fnos/ICON.PNG" width="28"> | [**Medusa**](apps/medusa/) | `8081` | 电视剧自动下载管理 | [GitHub](https://github.com/pymedusa/Medusa) | [Release][r-medusa] |
 
 ### ⬇️ 下载工具
 
@@ -49,6 +55,8 @@
 | <img src="apps/alist/fnos/ICON.PNG" width="28"> | [**Alist**](apps/alist/) | `5246` | 网盘聚合工具，挂载阿里云盘/百度盘等 | [GitHub](https://github.com/AlistGo/alist) | [Release][r-alist] |
 | <img src="apps/rclone/fnos/ICON.PNG" width="28"> | [**Rclone**](apps/rclone/) | `5572` | 云存储同步工具，支持 50+ 存储后端 | [官网](https://rclone.org) | [Release][r-rclone] |
 | <img src="apps/cloudreve/fnos/ICON.PNG" width="28"> | [**Cloudreve**](apps/cloudreve/) | `5212` | 国产云盘系统 | [官网](https://cloudreve.org) | [Release][r-cloudreve] |
+| <img src="apps/sabnzbd/fnos/ICON.PNG" width="28"> | [**SABnzbd**](apps/sabnzbd/) | `8780` | Usenet 下载客户端 | [官网](https://sabnzbd.org) | [Release][r-sabnzbd] |
+| <img src="apps/copyparty/fnos/ICON.PNG" width="28"> | [**CopyParty**](apps/copyparty/) | `3923` | 便携文件共享服务器 | [GitHub](https://github.com/9001/copyparty) | [Release][r-copyparty] |
 
 ### 📚 内容管理
 
@@ -68,6 +76,7 @@
 | <img src="apps/mealie/fnos/ICON.PNG" width="28"> | [**Mealie**](apps/mealie/) | `9925` | 食谱管理与膳食计划 | [官网](https://mealie.io) | [Release][r-mealie] |
 | <img src="apps/paperless-ngx/fnos/ICON.PNG" width="28"> | [**Paperless-ngx**](apps/paperless-ngx/) | `8000` | 文档数字化管理，OCR 支持 | [官网](https://docs.paperless-ngx.com) | [Release][r-paperless] |
 | <img src="apps/appflowy/fnos/ICON.PNG" width="28"> | [**AppFlowy**](apps/appflowy/) | `8500` | Notion 开源替代品，协作文档平台 | [官网](https://appflowy.io) | [Release][r-appflowy] |
+| <img src="apps/reactive-resume/fnos/ICON.PNG" width="28"> | [**Reactive Resume**](apps/reactive-resume/) | `3200` | 在线简历制作工具 | [GitHub](https://github.com/AmruthPillworking/Reactive-Resume) | [Release][r-reactive-resume] |
 
 ### 🎵 媒体自动化
 
@@ -114,6 +123,12 @@
 | <img src="apps/it-tools/fnos/ICON.PNG" width="28"> | [**IT-Tools**](apps/it-tools/) | `8280` | 开发者工具箱 | [官网](https://it-tools.tech) | [Release][r-it-tools] |
 | <img src="apps/mattermost/fnos/ICON.PNG" width="28"> | [**Mattermost**](apps/mattermost/) | `8065` | 企业即时通讯，Slack 替代 | [官网](https://mattermost.com) | [Release][r-mattermost] |
 | <img src="apps/homeassistant/fnos/ICON.PNG" width="28"> | [**Home Assistant**](apps/homeassistant/) | `8123` | 智能家居中枢平台 | [官网](https://www.home-assistant.io) | [Release][r-homeassistant] |
+| <img src="apps/nginx-proxy-manager/fnos/ICON.PNG" width="28"> | [**Nginx Proxy Manager**](apps/nginx-proxy-manager/) | `81` | 反向代理可视化管理 | [GitHub](https://github.com/NginxProxyManager/nginx-proxy-manager) | [Release][r-npm] |
+| <img src="apps/dpanel/fnos/ICON.PNG" width="28"> | [**DPanel**](apps/dpanel/) | `8807` | 轻量级 Docker 管理面板 | [GitHub](https://github.com/donknap/dpanel) | [Release][r-dpanel] |
+| <img src="apps/netdata/fnos/ICON.PNG" width="28"> | [**Netdata**](apps/netdata/) | `19999` | 实时系统性能监控 | [官网](https://www.netdata.cloud) | [Release][r-netdata] |
+| <img src="apps/node-red/fnos/ICON.PNG" width="28"> | [**Node-RED**](apps/node-red/) | `1880` | 可视化流程自动化工具 | [官网](https://nodered.org) | [Release][r-nodered] |
+| <img src="apps/forgejo/fnos/ICON.PNG" width="28"> | [**Forgejo**](apps/forgejo/) | `3005` | 社区驱动的 Git 代码托管 | [官网](https://forgejo.org) | [Release][r-forgejo] |
+| <img src="apps/clamav/fnos/ICON.PNG" width="28"> | [**ClamAV**](apps/clamav/) | `3310` | 开源杀毒引擎 | [官网](https://www.clamav.net) | [Release][r-clamav] |
 
 ### 🤖 AI
 
@@ -122,6 +137,8 @@
 | <img src="apps/openclaw/fnos/ICON.PNG" width="28"> | [**OpenClaw**](apps/openclaw/) | `18789` | AI 智能体网关，支持多渠道接入 | [官网](https://docs.openclaw.ai) | [Release][r-openclaw] |
 | <img src="apps/localai/fnos/ICON.PNG" width="28"> | [**LocalAI**](apps/localai/) | `8180` | 本地 AI 推理，兼容 OpenAI API | [官网](https://localai.io) | [Release][r-localai] |
 | <img src="apps/librechat/fnos/ICON.PNG" width="28"> | [**LibreChat**](apps/librechat/) | `3080` | AI 聊天界面，支持多模型 | [官网](https://librechat.ai) | [Release][r-librechat] |
+| <img src="apps/open-webui/fnos/ICON.PNG" width="28"> | [**Open WebUI**](apps/open-webui/) | `8080` | AI 聊天界面，支持多模型对话 | [GitHub](https://github.com/open-webui/open-webui) | [Release][r-openwebui] |
+| <img src="apps/ollama/fnos/ICON.PNG" width="28"> | [**Ollama**](apps/ollama/) | `11434` | 本地大语言模型运行引擎 | [官网](https://ollama.com) | [Release][r-ollama] |
 
 ### 🌐 网络工具
 
@@ -133,6 +150,7 @@
 | <img src="apps/wg-easy/fnos/ICON.PNG" width="28"> | [**WG-Easy**](apps/wg-easy/) | `51821` | WireGuard VPN 管理界面 | [GitHub](https://github.com/wg-easy/wg-easy) | [Release][r-wg-easy] |
 | <img src="apps/headscale/fnos/ICON.PNG" width="28"> | [**Headscale**](apps/headscale/) | `8480` | Tailscale 自托管控制服务器 | [GitHub](https://github.com/juanfont/headscale) | [Release][r-headscale] |
 | <img src="apps/netbird/fnos/ICON.PNG" width="28"> | [**NetBird**](apps/netbird/) | `8820` | Zero Trust VPN 平台 | [官网](https://netbird.io) | [Release][r-netbird] |
+| <img src="apps/tailscale/fnos/ICON.PNG" width="28"> | [**Tailscale**](apps/tailscale/) | `8088` | Mesh VPN 客户端 | [官网](https://tailscale.com) | [Release][r-tailscale] |
 
 ### 🌐 浏览器
 
@@ -301,3 +319,21 @@ fnos-apps/
 [r-wg-easy]: https://github.com/conversun/fnos-apps/releases?q=wg-easy
 [r-headscale]: https://github.com/conversun/fnos-apps/releases?q=headscale
 [r-netbird]: https://github.com/conversun/fnos-apps/releases?q=netbird
+[r-komga]: https://github.com/conversun/fnos-apps/releases?q=komga
+[r-koodo]: https://github.com/conversun/fnos-apps/releases?q=koodo-reader
+[r-jellystat]: https://github.com/conversun/fnos-apps/releases?q=jellystat
+[r-ombi]: https://github.com/conversun/fnos-apps/releases?q=ombi
+[r-wizarr]: https://github.com/conversun/fnos-apps/releases?q=wizarr
+[r-medusa]: https://github.com/conversun/fnos-apps/releases?q=medusa
+[r-sabnzbd]: https://github.com/conversun/fnos-apps/releases?q=sabnzbd
+[r-copyparty]: https://github.com/conversun/fnos-apps/releases?q=copyparty
+[r-reactive-resume]: https://github.com/conversun/fnos-apps/releases?q=reactive-resume
+[r-npm]: https://github.com/conversun/fnos-apps/releases?q=nginx-proxy-manager
+[r-dpanel]: https://github.com/conversun/fnos-apps/releases?q=dpanel
+[r-netdata]: https://github.com/conversun/fnos-apps/releases?q=netdata
+[r-nodered]: https://github.com/conversun/fnos-apps/releases?q=node-red
+[r-forgejo]: https://github.com/conversun/fnos-apps/releases?q=forgejo
+[r-clamav]: https://github.com/conversun/fnos-apps/releases?q=clamav
+[r-openwebui]: https://github.com/conversun/fnos-apps/releases?q=open-webui
+[r-ollama]: https://github.com/conversun/fnos-apps/releases?q=ollama
+[r-tailscale]: https://github.com/conversun/fnos-apps/releases?q=tailscale
