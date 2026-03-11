@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T08:08:25Z",
+  "generated_at": "2026-03-11T08:08:33Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -750,8 +750,8 @@
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
       "version": "2.5.6",
-      "fpk_version": "2.5.6-r1",
-      "release_tag": "immich/v2.5.6-r1",
+      "fpk_version": "2.5.6",
+      "release_tag": "immich/v2.5.6",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -759,7 +759,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:24Z",
+      "updated_at": "2026-03-11T08:08:29Z",
       "download_count": 65,
       "app_type": "docker",
       "category": "media"
@@ -959,9 +959,9 @@
       "file_prefix": "koodo-reader",
       "display_name": "Koodo Reader",
       "description": "开源电子书阅读器，支持 EPUB、PDF、Mobi 等格式，跨平台同步阅读进度。",
-      "version": "2.3.0",
-      "fpk_version": "2.3.0-r1",
-      "release_tag": "koodo-reader/v2.3.0-r1",
+      "version": "null",
+      "fpk_version": "null",
+      "release_tag": "koodo-reader/vnull",
       "service_port": 8930,
       "homepage_url": "https://github.com/koodo-reader/koodo-reader",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/koodo-reader/fnos/ICON_256.PNG",
@@ -969,7 +969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:52Z",
+      "updated_at": "2026-03-11T08:08:24Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "content"
@@ -1342,8 +1342,8 @@
       "display_name": "Netdata",
       "description": "实时系统监控面板，每秒采集 CPU/内存/磁盘/网络等指标。",
       "version": "2.9.0",
-      "fpk_version": "2.9.0-r1",
-      "release_tag": "netdata/v2.9.0-r1",
+      "fpk_version": "2.9.0",
+      "release_tag": "netdata/v2.9.0",
       "service_port": 19999,
       "homepage_url": "https://github.com/netdata/netdata",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netdata/fnos/ICON_256.PNG",
@@ -1351,7 +1351,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:51Z",
+      "updated_at": "2026-03-11T08:08:26Z",
       "download_count": 32,
       "app_type": "docker",
       "category": "system"
@@ -1447,8 +1447,8 @@
       "display_name": "Node-RED",
       "description": "可视化流程编排工具，支持 IoT 和智能家居自动化。",
       "version": "4.1.7",
-      "fpk_version": "4.1.7-r1",
-      "release_tag": "node-red/v4.1.7-r1",
+      "fpk_version": "4.1.7",
+      "release_tag": "node-red/v4.1.7",
       "service_port": 1880,
       "homepage_url": "https://github.com/node-red/node-red",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/node-red/fnos/ICON_256.PNG",
@@ -1456,7 +1456,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:20Z",
+      "updated_at": "2026-03-11T08:08:23Z",
       "download_count": 2,
       "app_type": "docker",
       "category": "system"
@@ -1489,8 +1489,8 @@
       "display_name": "Ollama",
       "description": "本地大语言模型运行引擎，支持 Llama、Mistral、Gemma 等开源模型。",
       "version": "0.17.7",
-      "fpk_version": "0.17.7-r1",
-      "release_tag": "ollama/v0.17.7-r1",
+      "fpk_version": "0.17.7",
+      "release_tag": "ollama/v0.17.7",
       "service_port": 11434,
       "homepage_url": "https://github.com/ollama/ollama",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ollama/fnos/ICON_256.PNG",
@@ -1498,7 +1498,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:51:23Z",
+      "updated_at": "2026-03-11T08:08:25Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai"
@@ -1867,8 +1867,8 @@
       "display_name": "SABnzbd",
       "description": "Usenet 二进制新闻组下载客户端，支持自动解压和后处理。",
       "version": "4.5.5",
-      "fpk_version": "4.5.5-r1",
-      "release_tag": "sabnzbd/v4.5.5-r1",
+      "fpk_version": "4.5.5",
+      "release_tag": "sabnzbd/v4.5.5",
       "service_port": 8780,
       "homepage_url": "https://github.com/sabnzbd/sabnzbd",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sabnzbd/fnos/ICON_256.PNG",
@@ -1876,7 +1876,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T06:52:54Z",
+      "updated_at": "2026-03-11T08:08:30Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "download"
