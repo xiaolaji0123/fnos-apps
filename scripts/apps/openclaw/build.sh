@@ -51,6 +51,7 @@ find "${OC_MODULES}" -type f \( \
 \) -delete 2>/dev/null || true
 
 # 3) Remove test, docs, example, and CI directories
+# yaml dist/doc/ is functional source, not documentation (https://github.com/eemeli/yaml/issues/384)
 echo "==> Removing test/docs/example directories..."
 find "${OC_MODULES}" -type d \( \
   -name "test" -o -name "tests" -o -name "__tests__" \
@@ -61,7 +62,7 @@ find "${OC_MODULES}" -type d \( \
   -o -name "coverage" -o -name ".nyc_output" \
   -o -name "benchmark" -o -name "benchmarks" \
   -o -name "man" \
-\) -exec rm -rf {} + 2>/dev/null || true
+\) ! -path "*/dist/doc" -exec rm -rf {} + 2>/dev/null || true
 
 echo "==> Size after optimization: $(du -sh ./openclaw_global | cut -f1)"
 
