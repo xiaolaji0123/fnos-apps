@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T18:13:14Z",
+  "generated_at": "2026-03-11T18:23:09Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -76,8 +76,8 @@
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
       "version": "3.0.8",
-      "fpk_version": "3.0.8",
-      "release_tag": "ani-rss/v3.0.8",
+      "fpk_version": "3.0.8-r1",
+      "release_tag": "ani-rss/v3.0.8-r1",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -85,7 +85,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:55Z",
+      "updated_at": "2026-03-11T18:22:58Z",
       "download_count": 102,
       "app_type": "docker",
       "category": "content"
@@ -97,8 +97,8 @@
       "display_name": "AppFlowy",
       "description": "开源 Notion 替代品，支持自托管的协作文档平台。",
       "version": "0.9.64",
-      "fpk_version": "0.9.64",
-      "release_tag": "appflowy/v0.9.64",
+      "fpk_version": "0.9.64-r1",
+      "release_tag": "appflowy/v0.9.64-r1",
       "service_port": 8500,
       "homepage_url": "https://appflowy.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/appflowy/fnos/ICON_256.PNG",
@@ -106,7 +106,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:09Z",
+      "updated_at": "2026-03-11T18:22:58Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "system",
@@ -855,8 +855,8 @@
       "display_name": "IT-Tools",
       "description": "开发者工具箱，提供 JSON/YAML 转换、编码解码等常用工具。",
       "version": "2024.10.22-7ca5933",
-      "fpk_version": "2024.10.22-7ca5933",
-      "release_tag": "it-tools/v2024.10.22-7ca5933",
+      "fpk_version": "2024.10.22-7ca5933-r1",
+      "release_tag": "it-tools/v2024.10.22-7ca5933-r1",
       "service_port": 8280,
       "homepage_url": "https://it-tools.tech",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/it-tools/fnos/ICON_256.PNG",
@@ -864,7 +864,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:21Z",
+      "updated_at": "2026-03-11T18:22:54Z",
       "download_count": 5,
       "app_type": "docker",
       "category": "system"
@@ -939,8 +939,8 @@
       "display_name": "Jellystat",
       "description": "Jellyfin 媒体服务器的使用统计和监控面板。",
       "version": "1.1.8",
-      "fpk_version": "1.1.8-r1",
-      "release_tag": "jellystat/v1.1.8-r1",
+      "fpk_version": "1.1.8",
+      "release_tag": "jellystat/v1.1.8",
       "service_port": 3004,
       "homepage_url": "https://github.com/CyferShepard/Jellystat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellystat/fnos/ICON_256.PNG",
@@ -948,7 +948,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:29Z",
+      "updated_at": "2026-03-11T18:23:07Z",
       "download_count": 8,
       "app_type": "docker",
       "category": "media"
@@ -960,8 +960,8 @@
       "display_name": "Kavita",
       "description": "开源的漫画、轻小说和电子书阅读服务器",
       "version": "0.8.9",
-      "fpk_version": "0.8.9",
-      "release_tag": "kavita/v0.8.9",
+      "fpk_version": "0.8.9-r1",
+      "release_tag": "kavita/v0.8.9-r1",
       "service_port": 5000,
       "homepage_url": "https://github.com/Kareadita/Kavita",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
@@ -969,7 +969,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:31Z",
+      "updated_at": "2026-03-11T18:22:56Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "media"
@@ -1404,8 +1404,8 @@
       "display_name": "NetBird",
       "description": "零信任 VPN 管理平台，提供简单的私有网络组建。",
       "version": "0.66.3",
-      "fpk_version": "0.66.3",
-      "release_tag": "netbird/v0.66.3",
+      "fpk_version": "0.66.3-r1",
+      "release_tag": "netbird/v0.66.3-r1",
       "service_port": 8820,
       "homepage_url": "https://netbird.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netbird/fnos/ICON_256.PNG",
@@ -1413,7 +1413,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:29Z",
+      "updated_at": "2026-03-11T18:23:01Z",
       "download_count": 17,
       "app_type": "docker",
       "category": "system",
@@ -1489,8 +1489,8 @@
       "display_name": "Nginx Proxy Manager",
       "description": "图形化反向代理管理工具，支持 SSL 证书自动申请和续期。",
       "version": "2.14.0",
-      "fpk_version": "2.14.0",
-      "release_tag": "nginx-proxy-manager/v2.14.0",
+      "fpk_version": "2.14.0-r1",
+      "release_tag": "nginx-proxy-manager/v2.14.0-r1",
       "service_port": 81,
       "homepage_url": "https://github.com/NginxProxyManager/nginx-proxy-manager",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-proxy-manager/fnos/ICON_256.PNG",
@@ -1498,7 +1498,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:42Z",
+      "updated_at": "2026-03-11T18:23:03Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "system"
@@ -1667,7 +1667,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:18Z",
-      "download_count": 10,
+      "download_count": 20,
       "app_type": "native",
       "category": "content"
     },
@@ -1678,8 +1678,8 @@
       "display_name": "Paperless-ngx",
       "description": "文档 OCR 扫描与归档管理系统，将纸质文件数字化并智能分类",
       "version": "2.20.10",
-      "fpk_version": "2.20.10",
-      "release_tag": "paperless-ngx/v2.20.10",
+      "fpk_version": "2.20.10-r1",
+      "release_tag": "paperless-ngx/v2.20.10-r1",
       "service_port": 8000,
       "homepage_url": "https://docs.paperless-ngx.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/paperless-ngx/fnos/ICON_256.PNG",
@@ -1687,7 +1687,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:53Z",
+      "updated_at": "2026-03-11T18:23:04Z",
       "download_count": 25,
       "app_type": "docker",
       "category": "system"
@@ -1951,8 +1951,8 @@
       "display_name": "Rocket.Chat",
       "description": "开源团队协作通讯平台,支持即时消息、音视频通话和文件共享。",
       "version": "8.2.0",
-      "fpk_version": "8.2.0",
-      "release_tag": "rocketchat/v8.2.0",
+      "fpk_version": "8.2.0-r1",
+      "release_tag": "rocketchat/v8.2.0-r1",
       "service_port": 3003,
       "homepage_url": "https://rocket.chat",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/rocketchat/fnos/ICON_256.PNG",
@@ -1960,7 +1960,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:36Z",
+      "updated_at": "2026-03-11T18:22:56Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "content"
@@ -1993,8 +1993,8 @@
       "display_name": "Seerr",
       "description": "影视媒体请求管理工具，支持 Plex/Jellyfin/Emby，Overseerr 的社区分支。",
       "version": "3.1.0",
-      "fpk_version": "3.1.0",
-      "release_tag": "seerr/v3.1.0",
+      "fpk_version": "3.1.0-r1",
+      "release_tag": "seerr/v3.1.0-r1",
       "service_port": 5055,
       "homepage_url": "https://github.com/seerr-team/seerr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/seerr/fnos/ICON_256.PNG",
@@ -2002,7 +2002,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:26Z",
+      "updated_at": "2026-03-11T18:23:07Z",
       "download_count": 6,
       "app_type": "docker",
       "category": "media"
@@ -2161,8 +2161,8 @@
       "display_name": "Tailscale",
       "description": "Tailscale VPN 客户端，零配置组建安全私有网络，支持远程访问 NAS。",
       "version": "1.94.2",
-      "fpk_version": "1.94.2",
-      "release_tag": "tailscale/v1.94.2",
+      "fpk_version": "1.94.2-r1",
+      "release_tag": "tailscale/v1.94.2-r1",
       "service_port": 8088,
       "homepage_url": "https://github.com/tailscale/tailscale",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tailscale/fnos/ICON_256.PNG",
@@ -2170,7 +2170,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:31Z",
+      "updated_at": "2026-03-11T18:23:04Z",
       "download_count": 10,
       "app_type": "docker",
       "category": "system"
@@ -2224,8 +2224,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls334",
-      "release_tag": "transmission/v4.1.1-r1-ls334",
+      "fpk_version": "4.1.1-r1-ls334-r1",
+      "release_tag": "transmission/v4.1.1-r1-ls334-r1",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -2233,7 +2233,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:43Z",
+      "updated_at": "2026-03-11T18:23:03Z",
       "download_count": 38,
       "app_type": "docker",
       "category": "download"
@@ -2245,8 +2245,8 @@
       "display_name": "Uptime Kuma",
       "description": "简洁美观的服务监控工具，支持多种监控类型和告警通知",
       "version": "2.2.1",
-      "fpk_version": "2.2.1",
-      "release_tag": "uptime-kuma/v2.2.1",
+      "fpk_version": "2.2.1-r1",
+      "release_tag": "uptime-kuma/v2.2.1-r1",
       "service_port": 3001,
       "homepage_url": "https://github.com/louislam/uptime-kuma",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/uptime-kuma/fnos/ICON_256.PNG",
@@ -2254,7 +2254,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:15Z",
+      "updated_at": "2026-03-11T18:23:01Z",
       "download_count": 46,
       "app_type": "docker",
       "category": "system"
@@ -2308,8 +2308,8 @@
       "display_name": "Wiki.js",
       "description": "强大的自托管知识库/Wiki 系统，支持 Markdown 和多种编辑器",
       "version": "2.5.277",
-      "fpk_version": "2.5.277",
-      "release_tag": "wikijs/v2.5.277",
+      "fpk_version": "2.5.277-r1",
+      "release_tag": "wikijs/v2.5.277-r1",
       "service_port": 3100,
       "homepage_url": "https://js.wiki",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wikijs/fnos/ICON_256.PNG",
@@ -2317,7 +2317,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:16Z",
+      "updated_at": "2026-03-11T18:22:56Z",
       "download_count": 13,
       "app_type": "docker",
       "category": "content"
