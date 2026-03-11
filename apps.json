@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-11T18:23:35Z",
+  "generated_at": "2026-03-11T18:23:58Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -119,8 +119,8 @@
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
       "version": "2.32.1",
-      "fpk_version": "2.32.1",
-      "release_tag": "audiobookshelf/v2.32.1",
+      "fpk_version": "2.32.1-r1",
+      "release_tag": "audiobookshelf/v2.32.1-r1",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -128,7 +128,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:26Z",
+      "updated_at": "2026-03-11T18:23:50Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "content"
@@ -476,8 +476,8 @@
       "display_name": "Ente",
       "description": "端到端加密照片备份和存储服务，Google Photos 的隐私替代方案。",
       "version": "photos-v1.3.22",
-      "fpk_version": "photos-v1.3.22",
-      "release_tag": "ente/vphotos-v1.3.22",
+      "fpk_version": "photos-v1.3.22-r1",
+      "release_tag": "ente/vphotos-v1.3.22-r1",
       "service_port": 8510,
       "homepage_url": "https://ente.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ente/fnos/ICON_256.PNG",
@@ -485,7 +485,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:28Z",
+      "updated_at": "2026-03-11T18:23:47Z",
       "download_count": 26,
       "app_type": "docker",
       "category": "system",
@@ -540,8 +540,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3",
-      "release_tag": "firefox/v26.02.3",
+      "fpk_version": "26.02.3-r1",
+      "release_tag": "firefox/v26.02.3-r1",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -549,7 +549,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:40Z",
+      "updated_at": "2026-03-11T18:23:55Z",
       "download_count": 58,
       "app_type": "docker",
       "category": "browser"
@@ -666,8 +666,8 @@
       "display_name": "Glances",
       "description": "系统监控工具，提供 Web UI 的实时系统资源监控。",
       "version": "latest-full",
-      "fpk_version": "latest-full",
-      "release_tag": "glances/vlatest-full",
+      "fpk_version": "latest-full-r1",
+      "release_tag": "glances/vlatest-full-r1",
       "service_port": 61208,
       "homepage_url": "https://nicolargo.github.io/glances/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/glances/fnos/ICON_256.PNG",
@@ -675,7 +675,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:32Z",
+      "updated_at": "2026-03-11T18:23:36Z",
       "download_count": 24,
       "app_type": "docker",
       "category": "system"
@@ -813,8 +813,8 @@
       "display_name": "Homepage",
       "description": "高度可定制的应用仪表盘，支持 100+ 服务集成",
       "version": "1.10.1",
-      "fpk_version": "1.10.1",
-      "release_tag": "homepage/v1.10.1",
+      "fpk_version": "1.10.1-r1",
+      "release_tag": "homepage/v1.10.1-r1",
       "service_port": 3003,
       "homepage_url": "https://gethomepage.dev",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/homepage/fnos/ICON_256.PNG",
@@ -822,7 +822,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:39Z",
+      "updated_at": "2026-03-11T18:23:55Z",
       "download_count": 7,
       "app_type": "docker",
       "category": "system"
@@ -834,8 +834,8 @@
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
       "version": "2.5.6",
-      "fpk_version": "2.5.6-r1",
-      "release_tag": "immich/v2.5.6-r1",
+      "fpk_version": "2.5.6",
+      "release_tag": "immich/v2.5.6",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -843,7 +843,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:38Z",
+      "updated_at": "2026-03-11T18:23:50Z",
       "download_count": 65,
       "app_type": "docker",
       "category": "media"
@@ -918,8 +918,8 @@
       "display_name": "Jellyseerr",
       "description": "媒体请求管理工具，家庭成员可请求想看的影视并自动下载",
       "version": "2.7.3",
-      "fpk_version": "2.7.3",
-      "release_tag": "jellyseerr/v2.7.3",
+      "fpk_version": "2.7.3-r1",
+      "release_tag": "jellyseerr/v2.7.3-r1",
       "service_port": 5055,
       "homepage_url": "https://github.com/Fallenbagel/jellyseerr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyseerr/fnos/ICON_256.PNG",
@@ -927,7 +927,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:36Z",
+      "updated_at": "2026-03-11T18:23:47Z",
       "download_count": 3,
       "app_type": "docker",
       "category": "content"
@@ -1129,8 +1129,8 @@
       "display_name": "LocalAI",
       "description": "本地 AI 模型推理服务器，兼容 OpenAI API 接口。",
       "version": "3.12.1",
-      "fpk_version": "3.12.1",
-      "release_tag": "localai/v3.12.1",
+      "fpk_version": "3.12.1-r1",
+      "release_tag": "localai/v3.12.1-r1",
       "service_port": 8180,
       "homepage_url": "https://localai.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/localai/fnos/ICON_256.PNG",
@@ -1138,7 +1138,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:58Z",
+      "updated_at": "2026-03-11T18:23:53Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "system"
@@ -1192,8 +1192,8 @@
       "display_name": "Mattermost",
       "description": "企业级即时通讯平台，Slack 的开源替代方案。",
       "version": "11.4.2",
-      "fpk_version": "11.4.2",
-      "release_tag": "mattermost/v11.4.2",
+      "fpk_version": "11.4.2-r1",
+      "release_tag": "mattermost/v11.4.2-r1",
       "service_port": 8065,
       "homepage_url": "https://mattermost.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mattermost/fnos/ICON_256.PNG",
@@ -1201,7 +1201,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:01Z",
+      "updated_at": "2026-03-11T18:23:54Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "system",
@@ -1214,8 +1214,8 @@
       "display_name": "Mealie",
       "description": "自托管食谱管理工具，支持网页导入和家庭共享",
       "version": "3.12.0",
-      "fpk_version": "3.12.0",
-      "release_tag": "mealie/v3.12.0",
+      "fpk_version": "3.12.0-r1",
+      "release_tag": "mealie/v3.12.0-r1",
       "service_port": 9925,
       "homepage_url": "https://mealie.io",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/mealie/fnos/ICON_256.PNG",
@@ -1223,7 +1223,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:39Z",
+      "updated_at": "2026-03-11T18:23:56Z",
       "download_count": 32,
       "app_type": "docker",
       "category": "content"
@@ -1256,8 +1256,8 @@
       "display_name": "MelodyHub",
       "description": "Web 音乐搜索与下载服务，基于 lx-music 核心，支持多平台音源聚合搜索、服务器端下载和歌曲管理。",
       "version": "1.1.0",
-      "fpk_version": "1.1.0",
-      "release_tag": "melody-hub/v1.1.0",
+      "fpk_version": "1.1.0-r1",
+      "release_tag": "melody-hub/v1.1.0-r1",
       "service_port": 3006,
       "homepage_url": "https://github.com/gefl24/melody-hub",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/melody-hub/fnos/ICON_256.PNG",
@@ -1265,7 +1265,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:03Z",
+      "updated_at": "2026-03-11T18:23:36Z",
       "download_count": 156,
       "app_type": "docker",
       "category": "media"
@@ -1340,8 +1340,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.14",
-      "fpk_version": "2.9.14",
-      "release_tag": "moviepilot/v2.9.14",
+      "fpk_version": "2.9.14-r1",
+      "release_tag": "moviepilot/v2.9.14-r1",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -1349,7 +1349,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:25Z",
+      "updated_at": "2026-03-11T18:23:55Z",
       "download_count": 133,
       "app_type": "docker",
       "category": "content",
@@ -1426,8 +1426,8 @@
       "display_name": "Netdata",
       "description": "实时系统监控面板，每秒采集 CPU/内存/磁盘/网络等指标。",
       "version": "2.9.0",
-      "fpk_version": "2.9.0",
-      "release_tag": "netdata/v2.9.0",
+      "fpk_version": "2.9.0-r1",
+      "release_tag": "netdata/v2.9.0-r1",
       "service_port": 19999,
       "homepage_url": "https://github.com/netdata/netdata",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/netdata/fnos/ICON_256.PNG",
@@ -1435,7 +1435,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:33Z",
+      "updated_at": "2026-03-11T18:23:35Z",
       "download_count": 32,
       "app_type": "docker",
       "category": "system"
@@ -1531,8 +1531,8 @@
       "display_name": "Node-RED",
       "description": "可视化流程编排工具，支持 IoT 和智能家居自动化。",
       "version": "4.1.7",
-      "fpk_version": "4.1.7",
-      "release_tag": "node-red/v4.1.7",
+      "fpk_version": "4.1.7-r1",
+      "release_tag": "node-red/v4.1.7-r1",
       "service_port": 1880,
       "homepage_url": "https://github.com/node-red/node-red",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/node-red/fnos/ICON_256.PNG",
@@ -1540,7 +1540,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:15Z",
+      "updated_at": "2026-03-11T18:23:47Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "system"
@@ -1615,8 +1615,8 @@
       "display_name": "Open WebUI",
       "description": "AI 对话界面，支持连接 Ollama、OpenAI 等多种大语言模型。",
       "version": "0.8.10",
-      "fpk_version": "0.8.10",
-      "release_tag": "open-webui/v0.8.10",
+      "fpk_version": "0.8.10-r1",
+      "release_tag": "open-webui/v0.8.10-r1",
       "service_port": 8080,
       "homepage_url": "https://github.com/open-webui/open-webui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/open-webui/fnos/ICON_256.PNG",
@@ -1624,7 +1624,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:02Z",
+      "updated_at": "2026-03-11T18:23:41Z",
       "download_count": 21,
       "app_type": "docker",
       "category": "ai"
@@ -2266,8 +2266,8 @@
       "display_name": "Vaultwarden",
       "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
       "version": "1.35.4",
-      "fpk_version": "1.35.4",
-      "release_tag": "vaultwarden/v1.35.4",
+      "fpk_version": "1.35.4-r1",
+      "release_tag": "vaultwarden/v1.35.4-r1",
       "service_port": 8880,
       "homepage_url": "https://github.com/dani-garcia/vaultwarden",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
@@ -2275,7 +2275,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:44:30Z",
+      "updated_at": "2026-03-11T18:23:45Z",
       "download_count": 24,
       "app_type": "docker",
       "category": "system"
@@ -2329,8 +2329,8 @@
       "display_name": "Wizarr",
       "description": "Plex/Jellyfin 用户邀请管理工具，简化媒体库共享流程。",
       "version": "2026.2.1",
-      "fpk_version": "2026.2.1",
-      "release_tag": "wizarr/v2026.2.1",
+      "fpk_version": "2026.2.1-r1",
+      "release_tag": "wizarr/v2026.2.1-r1",
       "service_port": 5690,
       "homepage_url": "https://github.com/wizarrrr/wizarr",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wizarr/fnos/ICON_256.PNG",
@@ -2338,7 +2338,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-11T17:45:02Z",
+      "updated_at": "2026-03-11T18:23:47Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "media"
