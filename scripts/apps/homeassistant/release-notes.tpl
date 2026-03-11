@@ -6,6 +6,7 @@
 - 主页: ${HOMEPAGE_URL}
 
 > **注意**: Home Assistant 使用宿主网络模式和特权模式，以支持局域网设备发现与 USB 网关
+> **HACS**: 已预装 HACS 极速版，首次启动后在「设置 → 设备与服务」中搜索 HACS 完成初始化
 
 ${CHANGELOG}
 **国内镜像**:
