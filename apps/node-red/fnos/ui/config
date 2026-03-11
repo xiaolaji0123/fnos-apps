@@ -6,7 +6,7 @@
             "desc": "Node-RED Workflow Automation",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "1880",
             "protocol": "http",
             "url": "/",
             "allUsers": true

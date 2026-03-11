@@ -6,7 +6,7 @@
             "desc": "Glances",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "61208",
             "protocol": "http",
             "url": "/",
             "allUsers": true

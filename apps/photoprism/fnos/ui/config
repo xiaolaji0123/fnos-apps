@@ -6,7 +6,7 @@
             "desc": "PhotoPrism",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "2342",
             "protocol": "http",
             "url": "/",
             "allUsers": true

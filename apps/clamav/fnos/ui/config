@@ -6,7 +6,7 @@
             "desc": "Service only (no web UI)",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "3310",
             "protocol": "http",
             "url": "/",
             "allUsers": true

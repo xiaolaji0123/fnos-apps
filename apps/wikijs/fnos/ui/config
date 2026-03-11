@@ -6,7 +6,7 @@
             "desc": "Wiki.js",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "3100",
             "protocol": "http",
             "url": "/",
             "allUsers": true

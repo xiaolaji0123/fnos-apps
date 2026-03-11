@@ -6,7 +6,7 @@
             "desc": "WireGuard VPN Management",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "51821",
             "protocol": "http",
             "url": "/",
             "allUsers": true

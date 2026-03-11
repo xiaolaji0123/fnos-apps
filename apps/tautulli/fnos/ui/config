@@ -6,7 +6,7 @@
             "desc": "Tautulli",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "8181",
             "protocol": "http",
             "url": "/",
             "allUsers": true

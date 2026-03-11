@@ -6,7 +6,7 @@
             "desc": "Audiobookshelf",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "13378",
             "protocol": "http",
             "url": "/",
             "allUsers": true

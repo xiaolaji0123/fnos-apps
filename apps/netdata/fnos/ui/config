@@ -6,7 +6,7 @@
             "desc": "Netdata Monitoring Dashboard",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "19999",
             "protocol": "http",
             "url": "/",
             "allUsers": true

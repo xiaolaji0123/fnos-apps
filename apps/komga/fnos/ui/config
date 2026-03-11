@@ -6,7 +6,7 @@
             "desc": "Komga Comics and Ebooks",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "25600",
             "protocol": "http",
             "url": "/",
             "allUsers": true

@@ -6,7 +6,7 @@
             "desc": "Ollama API endpoint (no built-in web UI)",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "11434",
             "protocol": "http",
             "url": "/",
             "allUsers": true

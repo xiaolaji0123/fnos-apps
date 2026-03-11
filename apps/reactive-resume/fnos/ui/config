@@ -6,7 +6,7 @@
             "desc": "Online resume builder",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "3200",
             "protocol": "http",
             "url": "/",
             "allUsers": true

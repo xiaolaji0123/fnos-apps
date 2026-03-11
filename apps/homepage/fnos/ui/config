@@ -6,7 +6,7 @@
             "desc": "Homepage",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "3003",
             "protocol": "http",
             "url": "/",
             "allUsers": true

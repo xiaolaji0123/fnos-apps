@@ -6,7 +6,7 @@
             "desc": "Actual Budget",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "5006",
             "protocol": "http",
             "url": "/",
             "allUsers": true

@@ -6,7 +6,7 @@
             "desc": "IT-Tools",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "8280",
             "protocol": "http",
             "url": "/",
             "allUsers": true

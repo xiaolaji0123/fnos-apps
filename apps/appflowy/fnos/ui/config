@@ -6,7 +6,7 @@
             "desc": "AppFlowy",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "8500",
             "protocol": "http",
             "url": "/",
             "allUsers": true

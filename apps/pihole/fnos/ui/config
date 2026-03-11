@@ -6,7 +6,7 @@
             "desc": "Pi-hole DNS Ad Blocker",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "8053",
             "protocol": "http",
             "url": "/",
             "allUsers": true

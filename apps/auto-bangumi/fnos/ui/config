@@ -6,7 +6,7 @@
             "desc": "AutoBangumi",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "${wizard_port}",
+            "port": "7892",
             "protocol": "http",
             "url": "/",
             "allUsers": true
