@@ -18,6 +18,17 @@
 |:---:|---|---:|---|:---:|:---:|
 | <img src="apps/fnos-apps-store/fnos/ICON.PNG" width="28"> | **fnOS Apps** | `8011` | 第三方应用中心，一键安装与更新 | [GitHub](https://github.com/conversun/fnos-store) | [Release][r-store] |
 
+### 🤖 AI
+
+| | App | 端口 | 说明 | 来源 | 下载 |
+|:---:|---|---:|---|:---:|:---:|
+| <img src="apps/openclaw/fnos/ICON.PNG" width="28"> | **OpenClaw** | `18789` | AI 智能体网关，支持多渠道接入。建议使用 [sophnet.com](https://sophnet.com) 快速体验，或使用 MaxKB | [官网](https://docs.openclaw.ai) | [Release][r-openclaw] |
+| <img src="apps/localai/fnos/ICON.PNG" width="28"> | **LocalAI** | `8180` | 本地 AI 推理，兼容 OpenAI API | [官网](https://localai.io) | [Release][r-localai] |
+| <img src="apps/librechat/fnos/ICON.PNG" width="28"> | **LibreChat** | `3080` | AI 聊天界面，支持多模型 | [官网](https://librechat.ai) | [Release][r-librechat] |
+| <img src="apps/open-webui/fnos/ICON.PNG" width="28"> | **Open WebUI** | `8080` | AI 聊天界面，支持多模型对话 | [GitHub](https://github.com/open-webui/open-webui) | [Release][r-openwebui] |
+| <img src="apps/ollama/fnos/ICON.PNG" width="28"> | **Ollama** | `11434` | 本地大语言模型运行引擎 | [官网](https://ollama.com) | [Release][r-ollama] |
+| <img src="apps/maxkb/fnos/ICON.PNG" width="28"> | **MaxKB** | `8083` | AI 知识库问答系统，支持 RAG 和多模型对接 | [GitHub](https://github.com/1Panel-dev/MaxKB) | [Release][r-maxkb] |
+
 ### 🎬 媒体服务
 
 | | App | 端口 | 说明 | 来源 | 下载 |
@@ -133,17 +144,6 @@
 | <img src="apps/ezbookkeeping/fnos/ICON.PNG" width="28"> | **EZBookkeeping** | `8580` | 轻量级个人记账应用，支持多币种、多账户和预算管理 | [GitHub](https://github.com/mayswind/ezbookkeeping) | [Release][r-ezbookkeeping] |
 | <img src="apps/penpot/fnos/ICON.PNG" width="28"> | **Penpot** | `9001` | 开源设计和原型工具，Figma 的自托管替代方案 | [官网](https://penpot.app) | [Release][r-penpot] |
 | <img src="apps/surveyking/fnos/ICON.PNG" width="28"> | **SurveyKing** | `1991` | 开源问卷调查和在线考试系统，支持多种题型、逻辑跳转和数据导出 | [官网](https://github.com/anji-plus/survey) | [Release][r-surveyking] |
-
-### 🤖 AI
-
-| | App | 端口 | 说明 | 来源 | 下载 |
-|:---:|---|---:|---|:---:|:---:|
-| <img src="apps/openclaw/fnos/ICON.PNG" width="28"> | **OpenClaw** | `18789` | AI 智能体网关，支持多渠道接入 | [官网](https://docs.openclaw.ai) | [Release][r-openclaw] |
-| <img src="apps/localai/fnos/ICON.PNG" width="28"> | **LocalAI** | `8180` | 本地 AI 推理，兼容 OpenAI API | [官网](https://localai.io) | [Release][r-localai] |
-| <img src="apps/librechat/fnos/ICON.PNG" width="28"> | **LibreChat** | `3080` | AI 聊天界面，支持多模型 | [官网](https://librechat.ai) | [Release][r-librechat] |
-| <img src="apps/open-webui/fnos/ICON.PNG" width="28"> | **Open WebUI** | `8080` | AI 聊天界面，支持多模型对话 | [GitHub](https://github.com/open-webui/open-webui) | [Release][r-openwebui] |
-| <img src="apps/ollama/fnos/ICON.PNG" width="28"> | **Ollama** | `11434` | 本地大语言模型运行引擎 | [官网](https://ollama.com) | [Release][r-ollama] |
-| <img src="apps/maxkb/fnos/ICON.PNG" width="28"> | **MaxKB** | `8083` | AI 知识库问答系统，支持 RAG 和多模型对接 | [GitHub](https://github.com/1Panel-dev/MaxKB) | [Release][r-maxkb] |
 
 ### 🌐 网络工具
 
