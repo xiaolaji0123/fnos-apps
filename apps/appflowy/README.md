@@ -1,13 +1,32 @@
 # AppFlowy for fnOS
 
-开源 Notion 替代品，支持自托管的协作文档平台。
+每日自动同步 [AppFlowy 官方](https://appflowy.io) 最新版本并构建 `.fpk` 安装包。
 
-- 上游项目: https://github.com/AppFlowy-IO/AppFlowy-Cloud
-- 默认端口: 8500
-- 运行方式: Docker（简化单服务）
+## 下载
 
-## Local Build
+从 [Releases](https://github.com/conversun/fnos-apps/releases?q=appflowy) 下载最新的 `.fpk` 文件。
+
+## 安装
+
+1. 根据设备架构下载对应的 `.fpk` 文件
+2. fnOS 应用管理 → 手动安装 → 上传
+
+**访问地址**: `http://<NAS-IP>:8500`
+
+## 说明
+
+- 协作文档平台，Notion 开源替代
+- 支持实时协作编辑和多人协作
+- 数据完全自主可控，本地优先存储
+- 丰富的文档编辑和数据库功能
+- 基于 Docker 部署，首次启动需要拉取镜像
+
+## 本地构建
 
 ```bash
 cd apps/appflowy && bash ../../scripts/build-fpk.sh . app.tgz
 ```
+
+## Credits
+
+- [AppFlowy](https://appflowy.io)

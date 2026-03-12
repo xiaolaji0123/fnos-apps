@@ -35,7 +35,7 @@ tinyMediaManager tvshow -u -n -r
 
 启用后可通过 REST API 远程控制，详见 https://www.tinymediamanager.org/docs/http-api
 
-## Local Build
+## 本地构建
 
 ```bash
 cd apps/tinymediamanager && bash ../../scripts/build-fpk.sh . app.tgz

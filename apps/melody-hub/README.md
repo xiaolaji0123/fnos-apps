@@ -15,7 +15,7 @@ Web 音乐搜索与下载服务，基于 [lx-music-desktop](https://github.com/l
 - SQLite 数据持久化
 - 内置歌曲管理器 (元数据编辑)
 
-## Local Build
+## 本地构建
 
 ```bash
 cd apps/melody-hub && ./update_melody-hub.sh

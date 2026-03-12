@@ -48,7 +48,7 @@
 - 容器以非 root 用户运行（PUID/PGID 映射）
 - 配置文件目录: `${TRIM_PKGVAR}/config`
 
-## Local Build
+## 本地构建
 
 ```bash
 cd apps/homeassistant && ./update_homeassistant.sh
